@@ -26,7 +26,6 @@ RUN apk add --no-cache php82 \
     php82-pdo_mysql \
     php82-pdo_sqlite \
     php82-pecl-redis 
-RUN ln -s /usr/bin/php82 /usr/bin/php
 COPY --from=composer:latest /usr/bin/composer /usr/local/bin/composer
 RUN mkdir -p /etc/supervisor.d/
 COPY .docker/supervisord.ini /etc/supervisor.d/supervisord.ini
