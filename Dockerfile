@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.19
 WORKDIR /var/www/html/
 RUN echo "UTC" > /etc/timezone
 RUN apk add --no-cache zip unzip curl sqlite nginx supervisor 
